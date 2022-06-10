@@ -20,12 +20,14 @@ html {
 body {
   overflow-x: hidden;
   width: 100vw;
+  font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .container {
   max-width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
+  overflow-y: hidden;
   margin: 0 auto;
   padding: 0 5%;
 }
@@ -56,20 +58,10 @@ li {
   border-bottom: 0.3rem solid var(--main-color-blue);
 }
 
-.burger-menu-active {
-  opacity: 1;
-  height: 100%;
-}
-
 /* Шапка */
 .header {
   min-height: 8rem;
-  font-family: 'Nanum Gothic', arial, sans-serif;
   width: 100%;
-}
-
-.header .header__nav {
-  opacity: 1;
 }
 
 .header .header__mobile {
@@ -77,6 +69,12 @@ li {
   width: 100%;
   height: 8rem;
   display: none;
+}
+
+.header .header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header .header__burger {
@@ -288,6 +286,30 @@ li {
   }
 }
 
+.who-we-are {
+  margin-top: 40rem;
+}
+
+.who-we-are__title {
+  background: linear-gradient(175deg, #6c3ee0, #3db2e0);
+}
+
+.who-we-are__title h1 {
+  font-size: 27rem;
+  mix-blend-mode: screen;
+  background: white;
+}
+
+.who-we-are__subtitle {
+  background: linear-gradient(175deg, #6c3ee0, #3db2e0);
+}
+
+.who-we-are__subtitle h2 {
+  font-size: 10rem;
+  mix-blend-mode: screen;
+  background: white;
+}
+
 @media (min-width: 960px) and (max-width: 1200px) {
   .header .header__menu {
     font-size: 2.3rem;
@@ -331,10 +353,9 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    opacity: 0;
+    display: none;
     -webkit-transition: .25s ease-in;
     transition: .25s ease-in;
-    height: 0;
   }
   .header .header__items {
     -webkit-box-orient: vertical;

@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    overflow: hidden;
+    overflow-x:hidden;
     width: 100vw;
 }
 
@@ -24,8 +24,9 @@ body {
     max-width: 100%;
     min-height: 100vh;
     overflow-x:hidden;
-    margin: auto;
+    margin: 0 auto;
     padding: 0 5%;
+    // white-space: nowrap
 }
 
 a {
@@ -36,10 +37,6 @@ a {
 li {
     list-style: none;
 }
-
-// section, header {
-//     width: 100%;
-// }
 
 /* Модификаторы */
 .flex-center {
@@ -52,13 +49,15 @@ li {
     border-bottom: 0.3rem solid var(--main-color-blue);
 }
 
-
 /* Шапка */
 .header {
     min-height: 8rem;
     font-family: 'Nanum Gothic', arial, sans-serif;
     width: 100%;
 
+    .header__nav {
+        opacity: 1;
+    }
 
     .header__mobile {
         background-color: black;
@@ -70,17 +69,44 @@ li {
 
     .header__burger {
         margin-left: 4rem;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        position: relative;
     }
 
-    .header__burger span:nth-child(2) {
-        margin: 0.5rem 0;
+    .header__burger.open {
+        display: flex;
+        justify-content: center;
     }
 
     .header__line{
         background: var(--main-color-purple);
-        width: 4rem;
-        height: 0.3rem;
+        width: 5rem;
+        height: 0.6rem;
         display: block;
+        margin: 0.7rem 0;
+        transition: .25s ease-in-out;
+    }
+
+    .header__burger span:nth-child(2) {
+        margin: 0.7rem 0;
+    }
+
+    .header__burger.open span:nth-child(1) {
+        transform: rotate(45deg);
+        // position: absolute;
+        top: 0px;
+        left: 0x;
+    }
+    .header__burger.open span:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+    }
+    .header__burger.open span:nth-child(3) {
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 0px;
+        left: 0px;
     }
 
     .header__menu {
@@ -211,13 +237,7 @@ li {
       }
 }
 
-/* @media (min-width: 1200px) and (max-width: 1500px) {
-    html {
-        font-size: 8px;
-    }
-} */
-
-@media (min-width: 1000px) and (max-width: 1500px) {
+@media (min-width: 960px) and (max-width: 1200px) {
     .header {
         .header__menu {
             font-size: 2.3rem;
@@ -228,9 +248,9 @@ li {
     }   
 }
 
-@media (min-width: 320px) and (max-width: 1000px) {
+@media (min-width: 320px) and (max-width: 960px) {
     html {
-        font-size: 1.2vw;
+        font-size: 2vw;
     }
     .container {
         padding: 0;
@@ -238,25 +258,23 @@ li {
     .header {
         flex-direction: column;
         background-color: white;
-
         
         .header__mobile {
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            height: 10rem;
         }
 
         .header__menu {
             margin: 0;
-            // font-size: 4rem;
         }
-
-        // .header__info {
-        //     font-size: 3rem;
-        // }
 
         .header__nav {
             flex-direction: column;
+            opacity: 0;
+            transition: .25s ease-in;
+            height: 0;
         }
         .header__items{
             flex-direction: column;
@@ -267,4 +285,67 @@ li {
             margin-bottom: 2rem;
         }
     }
-} 
+
+    .about-us {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-top: 7rem;
+
+        .about-us__absract-gif {
+            position: absolute;
+             filter: blur(7rem);
+            width: 50rem;
+            height: 50rem;
+            z-index: -1;
+            object-fit: fill;
+        }
+        
+        .about-us__absract-gif-1 {
+            bottom: 40rem;
+            left: 20rem;
+        }
+        
+        .about-us__absract-gif-2 {
+            bottom: 20rem;
+            right: 20rem;
+        }
+
+        .about-us__logo {
+            width: 15rem;
+            margin-bottom: 3rem;
+        }
+        
+        .about-us__text {
+   
+            .about-us__title {
+                font-size: 10rem;
+            }
+    
+            .about-us__subtitle {
+                font-size: 1.5rem;
+                margin-top: 2rem;
+            }
+
+            .about-us__btn {
+                min-width: 24rem;
+                min-height: 6rem;
+                margin-top: 20rem;
+                box-shadow: 0px 0px 10rem var(--main-color-purple);
+            }
+        }
+
+        .about-us__corona {
+            width: 2.8rem;
+            position: absolute;
+            bottom: -5rem;
+            right: 2rem;
+            -webkit-animation: pulse 3s ease-in-out infinite;
+            animation: pulse 3s ease-in-out infinite;
+        }
+    }
+}
+
+// @media (min-width: 320px) and (max-width: 640px) {
+
+// }

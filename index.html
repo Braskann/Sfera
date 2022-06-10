@@ -22,7 +22,7 @@
     <div class="container">
         <header class="header flex-center" id='burger'>
             <div class="header__mobile">
-                <div class="header__burger">
+                <div class="header__burger" @click="openBurger()">
                     <span class="header__line"></span>
                     <span class="header__line"></span>
                     <span class="header__line"></span>
@@ -50,8 +50,8 @@
         </header>
 
         <section class="about-us flex-center">
-            <img class="about-us__absract-gif about-us__absract-gif-1" src="img/abstract-shape.gif" alt="">
-            <img class="about-us__absract-gif about-us__absract-gif-2" src="img/abstract-shape.gif" alt="">
+            <!-- <img class="about-us__absract-gif about-us__absract-gif-1" src="img/abstract-shape.gif" alt="">
+            <img class="about-us__absract-gif about-us__absract-gif-2" src="img/abstract-shape.gif" alt=""> -->
             <div class="about-us__text flex-center">
                 <h1 class="about-us__title">СФЕРА</h1>
                 <p class="about-us__subtitle">мультимедийный парк профориентации</p>

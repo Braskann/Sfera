@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   width: 100vw;
 }
 
@@ -26,7 +26,7 @@ body {
   max-width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 5%;
 }
 
@@ -56,11 +56,20 @@ li {
   border-bottom: 0.3rem solid var(--main-color-blue);
 }
 
+.burger-menu-active {
+  opacity: 1;
+  height: 100%;
+}
+
 /* Шапка */
 .header {
   min-height: 8rem;
   font-family: 'Nanum Gothic', arial, sans-serif;
   width: 100%;
+}
+
+.header .header__nav {
+  opacity: 1;
 }
 
 .header .header__mobile {
@@ -72,17 +81,53 @@ li {
 
 .header .header__burger {
   margin-left: 4rem;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  position: relative;
 }
 
-.header .header__burger span:nth-child(2) {
-  margin: 0.5rem 0;
+.header .header__burger.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header .header__line {
   background: var(--main-color-purple);
-  width: 4rem;
-  height: 0.3rem;
+  width: 5rem;
+  height: 0.6rem;
   display: block;
+  margin: 0.7rem 0;
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.header .header__burger span:nth-child(2) {
+  margin: 0.7rem 0;
+}
+
+.header .header__burger.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0px;
+  left: 0x;
+}
+
+.header .header__burger.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.header .header__burger.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 .header .header__menu {
@@ -243,12 +288,7 @@ li {
   }
 }
 
-/* @media (min-width: 1200px) and (max-width: 1500px) {
-    html {
-        font-size: 8px;
-    }
-} */
-@media (min-width: 1000px) and (max-width: 1500px) {
+@media (min-width: 960px) and (max-width: 1200px) {
   .header .header__menu {
     font-size: 2.3rem;
   }
@@ -257,9 +297,9 @@ li {
   }
 }
 
-@media (min-width: 320px) and (max-width: 1000px) {
+@media (min-width: 320px) and (max-width: 960px) {
   html {
-    font-size: 1.2vw;
+    font-size: 2vw;
   }
   .container {
     padding: 0;
@@ -281,6 +321,7 @@ li {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 10rem;
   }
   .header .header__menu {
     margin: 0;
@@ -290,6 +331,10 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    opacity: 0;
+    -webkit-transition: .25s ease-in;
+    transition: .25s ease-in;
+    height: 0;
   }
   .header .header__items {
     -webkit-box-orient: vertical;
@@ -300,6 +345,63 @@ li {
   }
   .header .header__li {
     margin-bottom: 2rem;
+  }
+  .about-us {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 7rem;
+  }
+  .about-us .about-us__absract-gif {
+    position: absolute;
+    -webkit-filter: blur(7rem);
+            filter: blur(7rem);
+    width: 50rem;
+    height: 50rem;
+    z-index: -1;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .about-us .about-us__absract-gif-1 {
+    bottom: 40rem;
+    left: 20rem;
+  }
+  .about-us .about-us__absract-gif-2 {
+    bottom: 20rem;
+    right: 20rem;
+  }
+  .about-us .about-us__logo {
+    width: 15rem;
+    margin-bottom: 3rem;
+  }
+  .about-us .about-us__text .about-us__title {
+    font-size: 10rem;
+  }
+  .about-us .about-us__text .about-us__subtitle {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  .about-us .about-us__text .about-us__btn {
+    min-width: 24rem;
+    min-height: 6rem;
+    margin-top: 20rem;
+    -webkit-box-shadow: 0px 0px 10rem var(--main-color-purple);
+            box-shadow: 0px 0px 10rem var(--main-color-purple);
+  }
+  .about-us .about-us__corona {
+    width: 2.8rem;
+    position: absolute;
+    bottom: -5rem;
+    right: 2rem;
+    -webkit-animation: pulse 3s ease-in-out infinite;
+    animation: pulse 3s ease-in-out infinite;
   }
 }
 /*# sourceMappingURL=main.css.map */

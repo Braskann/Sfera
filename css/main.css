@@ -42,6 +42,18 @@ li {
 }
 
 /* Модификаторы */
+.flex-start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .flex-center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,10 +70,46 @@ li {
   border-bottom: 0.3rem solid var(--main-color-blue);
 }
 
+.gradient-title {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#6c3ee0), to(#3db2e0));
+  background-image: linear-gradient(180deg, #6c3ee0 0%, #3db2e0 100%);
+  color: transparent;
+  border-color: transparent;
+  background-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+
+.title-illumination {
+  opacity: 0.75;
+  border: none;
+  background-position: center center;
+  border-color: transparent;
+  -webkit-box-shadow: 0 0 4rem 1.2rem #370de0;
+          box-shadow: 0 0 4rem 1.2rem #370de0;
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+}
+
+.absract-gif {
+  position: absolute;
+  -webkit-filter: blur(5rem);
+          filter: blur(5rem);
+  width: 130rem;
+  height: 130rem;
+  z-index: -1;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
 /* Шапка */
 .header {
   min-height: 8rem;
-  width: 100%;
+  position: fixed;
+  left: 17%;
+  z-index: 2;
 }
 
 .header .header__mobile {
@@ -182,17 +230,6 @@ li {
   position: relative;
 }
 
-.about-us .about-us__absract-gif {
-  position: absolute;
-  -webkit-filter: blur(10rem);
-          filter: blur(10rem);
-  width: 130rem;
-  height: 130rem;
-  z-index: -1;
-  -o-object-fit: fill;
-     object-fit: fill;
-}
-
 .about-us .about-us__absract-gif-1 {
   bottom: -3.2rem;
   left: -58.2rem;
@@ -287,27 +324,71 @@ li {
 }
 
 .who-we-are {
-  margin-top: 40rem;
+  margin-top: 30rem;
+  position: relative;
+}
+
+.who-we-are__absract-gif-1 {
+  top: -35rem;
+  right: 75rem;
+}
+
+.who-we-are__absract-gif-2 {
+  bottom: -40rem;
+  right: -40rem;
+}
+
+.who-we-are__target {
+  position: relative;
 }
 
 .who-we-are__title {
-  background: linear-gradient(175deg, #6c3ee0, #3db2e0);
+  text-align: right;
+  margin-bottom: 10rem;
 }
 
-.who-we-are__title h1 {
-  font-size: 27rem;
-  mix-blend-mode: screen;
-  background: white;
+.who-we-are__title span {
+  font-size: 20rem;
 }
 
 .who-we-are__subtitle {
-  background: linear-gradient(175deg, #6c3ee0, #3db2e0);
+  display: inline-block;
+  position: relative;
+  margin-right: 10rem;
 }
 
-.who-we-are__subtitle h2 {
+.who-we-are__subtitle span {
   font-size: 10rem;
-  mix-blend-mode: screen;
-  background: white;
+}
+
+.who-we-are__illumination-1 {
+  width: 26rem;
+}
+
+.who-we-are__target-content-text {
+  opacity: 0.7;
+  width: 55%;
+  font-size: 3rem;
+  background-color: var(--main-color-purple);
+  border-radius: 2rem;
+  color: white;
+  padding: 3rem;
+  line-height: 1.7;
+}
+
+.who-we-are__target-content {
+  margin-top: 35rem;
+}
+
+.who-we-are__img-1 {
+  width: 50%;
+  border-radius: 2rem;
+  -webkit-box-shadow: -1rem -1rem 5rem #7e6969;
+          box-shadow: -1rem -1rem 5rem #7e6969;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 8rem;
 }
 
 @media (min-width: 960px) and (max-width: 1200px) {
@@ -332,6 +413,7 @@ li {
         -ms-flex-direction: column;
             flex-direction: column;
     background-color: white;
+    position: static;
   }
   .header .header__mobile {
     display: -webkit-box;
@@ -413,8 +495,8 @@ li {
     min-width: 24rem;
     min-height: 6rem;
     margin-top: 20rem;
-    -webkit-box-shadow: 0px 0px 10rem var(--main-color-purple);
-            box-shadow: 0px 0px 10rem var(--main-color-purple);
+    -webkit-box-shadow: 0px 0px 5rem var(--main-color-purple);
+            box-shadow: 0px 0px 5rem var(--main-color-purple);
   }
   .about-us .about-us__corona {
     width: 2.8rem;

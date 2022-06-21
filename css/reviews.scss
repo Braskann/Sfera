@@ -1,0 +1,31 @@
+@import 'main.scss';    
+
+.reviews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+    
+    &__wrapper {
+        width: 70%;
+    }
+
+    &__text {
+        background: #dceaf2;
+        padding: 3rem;
+        p {
+            font-size: 2rem;
+        }
+    }
+
+    &__greeting {
+        font-weight: bold;
+    }
+
+    &__title {
+        color: #008cff;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 9rem;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сфера НГК</title>
+    <link rel="stylesheet" href="css/reviews.css">
+    <!-- фавикон -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- подключение шрифта -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Open+Sans:wght@300;500&display=swap"
+        rel="stylesheet">
+    <!-- font awersome -->
+    <script src="https://kit.fontawesome.com/2f83676f02.js" crossorigin="anonymous"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header flex-center" id='burger'>
+            <div class="header__mobile">
+                <div class="header__burger" @click="openBurger()">
+                    <span class="header__line"></span>
+                    <span class="header__line"></span>
+                    <span class="header__line"></span>
+                </div>
+            </div>
+            <div class="header__nav flex-center">
+                <div class="header__menu">
+                    <!-- <embed src="img/abstract-shape.gif" type=""> -->
+                    <ul class="header__items flex-center">
+                        <li class="header__li"><a href="index.html" >О нас</a></li>
+                        <li class="header__li"><a href="#">Услуги</a></li>
+                        <li class="header__li"><a href="#">Календарь мероприятий</a></li>
+                        <li class="header__li"><a href="#">Дистанционная работа</a></li>
+                        <li class="header__li"><a href="reviews.html" class="item-menu-active">Отзывы</a></li>
+                    </ul>
+                </div>
+                <div class="header__info">
+                    <ul class="header__items flex-center">
+                        <li class="header__li"><a href="tel:+79991362114">Телефон: +7 999 136 2114</a></li>
+                        <li class="header__li"><a href="#"><img class="header__icon" src="img/vk-brands.svg" alt=""></a>
+                        </li>
+                        <li class="header__li header__btn flex-center"><a class="flex-center" href="#">Записаться</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <section class="reviews">
+            <div class="reviews__wrapper">
+                <h1 class="reviews__title">Опрос</h1>
+                <div class="reviews__text">
+                    <p class="reviews__greeting">Привет! Если ты прошел игру SKLAD SM - пройди пожалуйста опрос</p>
+                    <p>Цель тестирования - выявить сложности, возникшие при прохождении игры, недостатки интерфейса и дизайна, выявить соответствие между пройденным студентами материалом и сюжетом игры.
+                    </p>
+                    <p>Старайтесь отвечать на вопросы максимально развернуто, чтобы разработчики могли сделать игру понятной и комфортной для прохождения.
+                    </p>
+                    <a href="" class="header__btn">Оставить отзыв</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

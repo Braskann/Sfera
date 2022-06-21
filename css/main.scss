@@ -229,6 +229,8 @@ li {
         }
         
         .about-us__btn {
+            text-align: center;
+            padding-top: 0.5rem;
             font-family: 'Open Sans', sans-serif;
             color: white;
             min-width: 35rem;
@@ -271,13 +273,17 @@ li {
     margin-top: 30rem;
     position: relative;
 
+    &_block-1 {
+        position: relative;
+    }
+
     &__absract-gif-1 {
         top: -35rem;
         right: 75rem;
     }
     
     &__absract-gif-2 {
-        bottom: -40rem;
+        top: 20rem;
         right: -40rem;
     }
 
@@ -295,17 +301,22 @@ li {
 
     &__subtitle {
         display: inline-block;
-        position: relative;
         margin-right: 10rem;
         span {
             font-size: 10rem;
+            position: relative;
         }
     }
     &__illumination-1  {
         width: 26rem;
     }
+    &__illumination-2  {
+        width: 80rem;
+    }
 
-    &__target-content-text {
+
+
+    &__target-content-text, &__activity-content-text, &__events-content-text {
         opacity: 0.7;
         width: 55%;
         font-size: 3rem;
@@ -316,6 +327,24 @@ li {
         line-height: 1.7;
     }
 
+    &__activity-content-text, &__events-content-text {
+        padding-left: 10rem;
+        margin-top: 5rem;
+        width: 100%;
+    }
+
+    &__activity-content-text li, &__events-content-text li {
+        list-style-type: disc;
+    }
+
+    &__activity-content, &__events-content {
+        margin-top: 2   0rem;
+
+        .who-we-are__subtitle {
+            margin-left: 13rem;
+        }
+    }
+
     &__target-content {
         margin-top: 35rem;
     }
@@ -323,11 +352,218 @@ li {
     &__img-1 {
         width: 50%;
         border-radius: 2rem;
-        box-shadow: -1rem -1rem 5rem rgb(126, 105, 105);
+        box-shadow: -1rem -1rem 5rem var(--main-color-purple);
         position: absolute;
         z-index: 1;
         right: 0;
         top: 8rem;
+    }
+
+    &__img {
+        width: 40%;
+        position: relative;
+    }
+
+    
+    &__activity, &__events {
+        width: 60%;
+    }
+
+    &__img-2,  &__img-3 {
+        width: 90%;
+        border-radius: 2rem;
+        position: absolute;
+        left: 0;
+        top: 10rem;
+    }
+
+    &__img-2 {
+        box-shadow: -1rem -1rem 5rem var(--main-color-purple);
+        z-index: 1;
+        left: 12rem;
+        top: 42rem;
+    }
+    
+    &__img-3 {
+        box-shadow: -1rem -1rem 5rem var(--main-color-purple);
+        z-index: 0;
+        left: 0;
+        top: 0rem;
+    }
+
+    &__block-2, &__block-4 {
+        display: flex;
+        margin-top: 20rem;
+        margin-bottom: 40rem;
+    }
+
+    &__block-3 {
+        position: relative;
+        width: 100rem;
+        height: 56rem;
+        margin: 0 auto;
+        margin-bottom: 15rem;
+    }
+
+    &__video {
+        box-shadow: 0rem 0rem 10rem var(--main-color-purple);
+        width: 100%;
+        height: 100%;
+    }
+
+    &__block-4 {
+        padding-bottom: 55rem;
+    }
+        
+    &__illumination-3 {
+        position: absolute;
+        background: #370de0;
+        opacity: 0.75;
+        border: none;
+        z-index: -1;
+        border-color: transparent;
+        box-shadow: 0 0 10rem 3.2rem #370de0;
+        height: 100%;
+        width: 100%;
+        bottom: 0rem;
+        left: 0;
+    }
+    
+    &__img-4,  &__img-5,  &__img-6,  &__img-7,  &__img-8, &__img-blur {
+        width: 80%;
+        box-shadow: 2rem 2rem 6rem var(--main-color-purple);
+        border-radius: 2rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &__img-4 {
+        z-index: 5;
+        left: -4rem;
+        top: -4rem;
+    }
+
+    &__img-5 {
+        z-index: 4;
+        left: 35rem;
+        top: 60rem;
+        width: 55%;
+    }
+
+    &__img-8 {
+        z-index: 1;
+        left: -108rem;
+        top: 77rem;
+    }
+
+    &__img-7 {
+        z-index: 2;
+        left: -68rem;
+        top: 97rem;
+    }
+
+    &__img-6 {
+        z-index: 3;
+        left: -38rem;
+        top: 117rem;
+    }
+
+    &__img-blur {
+        width: 90%;
+        z-index: -1;
+        left: -30rem;
+        top: 51rem;
+        filter: blur(3rem);
+    }
+
+    &__absract-gif-3 {
+        z-index: 1;
+        top: 34rem;
+        left: -33rem;
+        filter: blur(7rem);
+        width: 100rem;
+        height: 100rem;
+    }
+}
+
+.where-we {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50rem;
+    padding: 0 15rem;
+
+    &__text {
+        width: 50%;
+    }
+
+    &__title {
+        font-size: 5rem;
+    }
+    &__adress {
+        font-size: 2rem;
+        line-height: 2;
+        font-weight: 300;
+        margin: 4rem 0;
+    }
+
+    &__telephone, &__email {
+        font-size: 1.7rem;
+        line-height: normal;
+        font-weight: 500;
+    }
+
+    &__map {
+        width: 50%;
+        height: 50rem;
+    }
+}
+
+.coronavirus {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15rem;
+    background-image: url(../img/coronavirus-back.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 10rem;
+    margin-bottom: 5rem;
+
+    &__title {
+        font-size: 10rem;
+        color: #e03d3d;
+        font-weight: 500;
+    }
+
+    &__stats {
+        width: 100%;
+
+        margin-top: 10rem;
+        margin-bottom: 5rem;
+
+
+        iframe {
+
+            height: 40rem;
+        }
+    }
+
+    &__map {  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        // // height: 50rem;
+        // #map_bg {
+        //     overflow-y: scroll;
+        //     }
+        // iframe {
+        //     overflow-y: scroll;
+        // }
+
     }
 }
 
@@ -339,7 +575,7 @@ li {
         .header__info {
             font-size: 1.7rem;
         }
-    }   
+    } 
 }
 
 @media (min-width: 320px) and (max-width: 960px) {
@@ -349,6 +585,16 @@ li {
     .container {
         padding: 0;
     }
+
+    .absract-gif {
+        position: absolute;
+        filter: blur(5rem);
+        width: 50rem;
+        height: 50rem;
+        z-index: -1;
+        object-fit: fill;
+    }
+
     .header {
         flex-direction: column;
         background-color: white;
@@ -396,13 +642,15 @@ li {
         }
         
         .about-us__absract-gif-1 {
-            bottom: 40rem;
+            top: -30rem;
             left: 20rem;
         }
         
         .about-us__absract-gif-2 {
-            bottom: 20rem;
-            right: 20rem;
+            bottom: 15rem;
+            right: 23rem;
+            width: 50rem;
+            height: 50rem;
         }
 
         .about-us__logo {
@@ -438,6 +686,267 @@ li {
             animation: pulse 3s ease-in-out infinite;
         }
     }
+
+    .who-we-are {
+        margin-top: 15rem;
+
+        &__title {
+            margin-bottom: 20rem;
+            text-align: center;
+            span {
+                font-size: 10rem;
+            }
+        }
+
+        &__subtitle {
+            span {
+                font-size: 6rem;
+            }
+        }
+
+        .title-illumination {
+            box-shadow: 0 0 4rem 0.7rem #370de0;
+        }
+
+        &__illumination-1 {
+            width: 17rem;
+        }
+
+        &__illumination-2 {
+            width: 47rem;
+        }
+
+        &__img-1 {
+            width: 75%;
+            right: 1rem;
+            top: -18rem;
+        }
+
+        &__target-content-text, &__activity-content-text, &__events-content-text {
+            width: 90%;
+
+        }
+
+        // &__target-content-text {
+        //     padding-top: 8rem;
+        // }
+
+        &__target-content {
+            margin-top: 30rem;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            .who-we-are__subtitle {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+        }
+
+        &__subtitle {
+            margin-right: 0;
+            margin-bottom: 2rem;
+        }
+
+        &__img-2,  &__img-3 {
+            width: 160%;
+            left: 0;
+            top: 10rem;
+        }
+
+        &__img-2 {
+            left: 18rem;
+            top: -25rem;
+        }
+        
+        &__img-3 {
+            z-index: 0;
+            left: 0;
+            top: -103rem;
+        }
+
+        &__block-1 {
+            margin-bottom: 30rem;
+        }
+
+        &__block-2 {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-bottom: 130rem;
+        }
+
+        &__activity-content{
+            .who-we-are__subtitle {
+                margin: 0;
+                margin-top: 5rem;
+                margin-left: -19rem;
+            }
+        }
+
+        &__activity-content-text {
+            position: absolute;
+            width: 95%;
+            left: 0;
+        }
+
+        &__block-3 {
+            width: 100%;
+            height: 28rem;
+        }
+
+        &__events-content {
+            .who-we-are__subtitle {
+                margin: 0;
+                padding-left: 1rem;
+            }
+        }
+
+        &__events-content-text {
+            width: 168%;
+        }
+
+        &__img-4,  &__img-5,  &__img-6,  &__img-7,  &__img-8, &__img-blur {
+            width: 150%;
+            box-shadow: 2rem 2rem 6rem var(--main-color-purple);
+            border-radius: 2rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    
+        &__img-4 {
+            display: none;
+            z-index: 5;
+            left: -30rem;
+            top: 118rem;
+        }
+    
+        &__img-5 {
+            display: none;
+            z-index: 4;
+            left: -30rem;
+            top: 118rem;
+            width: 55%;
+        }
+    
+        &__img-8 {
+
+            z-index: 1;
+            left: -30rem;
+            top: 118rem;
+        }
+    
+        &__img-7 {
+            z-index: 2;
+            left: -10rem;
+            top: 128rem;
+        }
+    
+        &__img-6 {
+            z-index: 3;
+            left: -30rem;
+            top: 143rem;
+        }
+    
+        &__img-blur {
+            display: none;
+            width: 90%;
+            z-index: -1;
+            left: -30rem;
+            top: 51rem;
+            filter: blur(3rem);
+        }
+    
+        &__absract-gif-3 {
+            display: none;
+            z-index: 1;
+            top: 34rem;
+            left: -33rem;
+            filter: blur(7rem);
+            width: 100rem;
+            height: 100rem;
+        }
+
+        &__block-4 {
+            margin-bottom: 0;
+        }
+    }
+
+    .where-we {
+        padding: 0 2rem;
+        flex-direction: column;
+        margin-top: 5rem;
+
+        &__text {
+            width: 100%;
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        &__title {
+            font-size: 3.5rem;
+            text-align: center;
+        }
+        &__adress {
+            font-size: 2rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+    
+        &__telephone, &__email {
+            font-size: 1.7rem;
+            line-height: normal;
+            font-weight: 500;
+        }
+    
+        &__map {
+            width: 100%;
+            height: 35rem;
+        }
+    }
+
+    .coronavirus {
+        margin-top: 5rem;
+        margin-bottom: 0;
+        background-image: none;
+        padding-bottom: 0;
+
+        &__title {
+            font-size: 6rem;
+        }
+
+        &__stats {
+        margin-top: 3rem;
+        // margin-bottom: -20rem;
+        iframe {
+            height: 16rem;
+        }
+        }
+
+        &__map {  
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+        }
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1200px) {
+    .header {
+        .header__menu {
+            font-size: 2.3rem;
+        }
+        .header__info {
+            font-size: 1.7rem;
+        }
+    }   
 }
 
 // @media (min-width: 320px) and (max-width: 640px) {

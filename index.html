@@ -12,12 +12,15 @@
     <!-- подключение шрифта -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Open+Sans:wght@300;500&display=swap"
+        rel="stylesheet">
     <!-- font awersome -->
     <script src="https://kit.fontawesome.com/2f83676f02.js" crossorigin="anonymous"></script>
     <!-- css -->
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
     <div class="container">
         <header class="header flex-center" id='burger'>
@@ -32,18 +35,20 @@
                 <div class="header__menu">
                     <!-- <embed src="img/abstract-shape.gif" type=""> -->
                     <ul class="header__items flex-center">
-                        <li class="header__li"><a href="#" class="item-menu-active">О нас</a></li>
+                        <li class="header__li"><a href="index.html" class="item-menu-active">О нас</a></li>
                         <li class="header__li"><a href="#">Услуги</a></li>
                         <li class="header__li"><a href="#">Календарь мероприятий</a></li>
                         <li class="header__li"><a href="#">Дистанционная работа</a></li>
-                        <li class="header__li"><a href="#">Отзывы</a></li>
+                        <li class="header__li"><a href="reviews.html">Отзывы</a></li>
                     </ul>
                 </div>
                 <div class="header__info">
                     <ul class="header__items flex-center">
                         <li class="header__li"><a href="tel:+79991362114">Телефон: +7 999 136 2114</a></li>
-                        <li class="header__li"><a href="#"><img class="header__icon" src="img/vk-brands.svg" alt=""></a></li>
-                        <li class="header__li header__btn flex-center"><a class="flex-center" href="#">Записаться</a></li>
+                        <li class="header__li"><a href="#"><img class="header__icon" src="img/vk-brands.svg" alt=""></a>
+                        </li>
+                        <li class="header__li header__btn flex-center"><a class="flex-center" href="#">Записаться</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -55,35 +60,140 @@
             <div class="about-us__text flex-center">
                 <h1 class="about-us__title">СФЕРА</h1>
                 <p class="about-us__subtitle">мультимедийный парк профориентации</p>
-                <button class="about-us__btn">О нас</button>
+                <a class="about-us__btn" href="#who-we-are">О нас</a>
             </div>
             <div>
                 <img class="about-us__logo" src="img/main-logo.svg" alt="">
-                <a href=""><img class="about-us__corona" src="img/main-coronavirus.svg" alt=""></a>
+                <a href="#coronavirus"><img class="about-us__corona" src="img/main-coronavirus.svg" alt=""></a>
             </div>
         </section>
 
-        <section class="who-we-are">
-            <img class="absract-gif who-we-are__absract-gif-1" src="img/abstract-shape.gif" alt="">
-            <img class="absract-gif who-we-are__absract-gif-2" src="img/abstract-shape.gif" alt="">
-            <h1 class="who-we-are__title">
-                <span class="gradient-title">КТО МЫ?</span>
-            </h1>
-            <div class="who-we-are__target">
-                <div class="who-we-are__target-content-text">
-                    <p>Мультимедийный парк профориентации «Сфера» <br> Центр функционирует на базе ГБПОУ "Нижегородский Губернский колледж" (НГК) с 2015 года</p>
-                </div>
-                <img class="who-we-are__img-1" src="img/whoWeAre-1.jpeg" alt="">
-                <div class="who-we-are__target-content flex-start">
-                    <h2 class="who-we-are__subtitle">
-                        <span class="gradient-title">Цель:</span>
-                        <div class="who-we-are__illumination-1  title-illumination"></div>
-                    </h2>
+        <section class="who-we-are" id="who-we-are">
+            <div class="who-we-are__block-1">
+                <img class="absract-gif who-we-are__absract-gif-1" src="img/abstract-shape.gif" alt="">
+                <img class="absract-gif who-we-are__absract-gif-2" src="img/abstract-shape.gif" alt="">
+                <h1 class="who-we-are__title">
+                    <span class="gradient-title">КТО МЫ?</span>
+                </h1>
+                <div class="who-we-are__target">
                     <div class="who-we-are__target-content-text">
-                        <p>В первую очередь центр занимается по оказанию помощи выпускникам колледжа в трудоустройстве по специальностям</p>
+                        <p>Мультимедийный парк профориентации «Сфера» <br> Центр функционирует на базе ГБПОУ
+                            "Нижегородский Губернский колледж" (НГК) с 2015 года</p>
+                    </div>
+                    <img class="who-we-are__img-1" src="img/whoWeAre-1.jpeg" alt="">
+                    <div class="who-we-are__target-content flex-start">
+                        <h2 class="who-we-are__subtitle">
+                            <span class="gradient-title">
+                                Цель:
+                                <div class="who-we-are__illumination-1  title-illumination"></div>
+                            </span>
+                        </h2>
+                        <div class="who-we-are__target-content-text">
+                            <p>В первую очередь центр занимается по оказанию помощи выпускникам колледжа в
+                                трудоустройстве по специальностям</p>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="who-we-are__block-2">
+                <div class="who-we-are__img">
+                    <img class="who-we-are__img-2" src="img/whoWeAre-2.jpg" alt="">
+                    <img class="who-we-are__img-3" src="img/whoWeAre-3.jpg" alt="">
+                </div>
+                <div class="who-we-are__activity">
+                    <div class="who-we-are__activity-content">
+                        <h2 class="who-we-are__subtitle">
+                            <span class="gradient-title">
+                                Деятельность:
+                                <div class="who-we-are__illumination-2 title-illumination"></div>
+                            </span>
+                        </h2>
+                        <div class="who-we-are__activity-content-text">
+                            <ul>
+                                <li>VR-ЭКСКУРСИИ по предприятиям</li>
+                                <li>Прохождение тестов и игровых приложений по выбранной специальности
+                                </li>
+                                <li>Интерактивные профессиональные пробы
+                                </li>
+                                <li>Мастер-классы от ведущих специалистов
+                                </li>
+                                <li>Семинары с работодателями и преподавателями
+                                </li>
+                                <li>Вебинары с работодателями
+                                </li>
+                                <li>Форсайт сессии и мероприятия с партнерами
+                                </li>
+                                <li>Коучинг тренинги</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- видео -->
+            <div  class="who-we-are__block-3 flex-center" >
+                <iframe title="vimeo-player" class="who-we-are__video" src="https://player.vimeo.com/video/671425042?h=37705bd496"  frameborder="0" allowfullscreen></iframe>
+                <div class="who-we-are__illumination-3"></div>
+                 <!-- <iframe class="who-we-are__video" src="https://player.vimeo.com/video/671425042?h=37705bd496" width="1600" height="840" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> -->
+            </div>
+
+            <div class="who-we-are__block-4">
+                <div class="who-we-are__events">
+                    <div class="who-we-are__events-content">
+                        <h2 class="who-we-are__subtitle">
+                            <span class="gradient-title">
+                                Мероприятия:
+                                <div class="who-we-are__illumination-2  title-illumination"></div>
+                            </span>
+                        </h2>
+                        <div class="who-we-are__events-content-text">
+                            <ul>
+                                <li>VR-ЭКСКУРСИИ по предприятиям.</li>
+                                <li>Мероприятия для школьников и студентов города и области
+                                </li>
+                                <li>Мероприятия для различной аудитории с применением цифровых решений
+                                </li>
+                                <li>Экскурсии для пенсионеров в рамках курсов компьютерной грамотности
+                                </li>
+                                <li>Интерактивные дни рождения
+                                </li>
+                                <li>Интерактивная «Ёлка»
+                                </li>
+                                <li>Профессиональные пробы кейсы и ВОРКШОП
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="who-we-are__img">
+                    <img class="absract-gif who-we-are__absract-gif-3" src="img/abstract-shape.gif" alt="">
+                    <img class="who-we-are__img-4" src="img/whoWeAre-4.jpg" alt="">
+                    <img class="who-we-are__img-blur" src="img/whoWeAre-4.jpg" alt="">
+                    <img class="who-we-are__img-5" src="img/whoWeAre-5.jpg" alt="">
+                    <img class="who-we-are__img-6" src="img/whoWeAre-6.jpg" alt="">
+                    <img class="who-we-are__img-7" src="img/whoWeAre-7.jpg" alt="">
+                    <img class="who-we-are__img-8" src="img/whoWeAre-8.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="where-we">
+            <div class="where-we__text">
+                <h1 class="where-we__title">Мы рады Вас видеть!</h1>
+                <p class="where-we__adress">Мультимедийный парк профориентации сфера находится по адресу: <br> 603116 Нижний Новгород, Московское шоссе, 1 ГБПОУ НГК</p>
+                <p class="where-we__telephone">8 (831) 218-22-12</p>
+                <p class="where-we__email">sferangknn@yandex.ru</p>
+            </div>
+            <div class="where-we__map">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae250bd1459c8b7a85cbb9e8c08fe0f1e372c142e2368a40e0dfa61a896382e13&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+        </section>
+
+        <section class="coronavirus" id="coronavirus">
+            <h1 class="coronavirus__title"> Берегите себя! </h1>
+            <div class="coronavirus__stats"><iframe src="https://covid.osnova.news/embed/world_ru.html" width="100%" style="max-width:100%;" frameborder="0"></iframe></div>
+            <div class="coronavirus__map"><iframe src="https://covid.osnova.news/map/" frameBorder="0" height="500" width="900" style="max-width: 100%;"></iframe></div>
         </section>
     </div>
 

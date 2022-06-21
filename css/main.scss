@@ -157,7 +157,13 @@ li {
 
     .header__li {
         padding: 0 1.5rem;
-        white-space:nowrap
+        white-space:nowrap;
+        transition: 0.5s;
+    }
+
+    .header__li:hover a {
+        color: var(--main-color-blue);
+        transition: 0.5s;
     }
 
     .header__info {
@@ -178,12 +184,23 @@ li {
             overflow: hidden;
             background-color: var(--main-color-blue);
             border-radius: 2rem;
+            transition: 0.5s;
         }
         .header__btn a {
             color: white;
             font-weight: 700;
             min-width: 13rem;
             min-height: 4rem;
+        }
+
+        .header__btn:hover {
+            outline: 0.3rem solid var(--main-color-blue);
+            background-color: rgba(255, 255, 255, 0);
+            transition: 0.5s;
+
+            a {
+                color: var(--main-color-blue);
+            }
         }
     }
 }

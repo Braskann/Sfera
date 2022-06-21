@@ -187,6 +187,14 @@ li {
 .header .header__li {
   padding: 0 1.5rem;
   white-space: nowrap;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header .header__li:hover a {
+  color: var(--main-color-blue);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .header .header__info {
@@ -209,6 +217,8 @@ li {
   overflow: hidden;
   background-color: var(--main-color-blue);
   border-radius: 2rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .header .header__info .header__btn a {
@@ -216,6 +226,17 @@ li {
   font-weight: 700;
   min-width: 13rem;
   min-height: 4rem;
+}
+
+.header .header__info .header__btn:hover {
+  outline: 0.3rem solid var(--main-color-blue);
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header .header__info .header__btn:hover a {
+  color: var(--main-color-blue);
 }
 
 /* Слайд со сферой */

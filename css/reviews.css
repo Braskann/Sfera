@@ -209,6 +209,8 @@ li {
   overflow: hidden;
   background-color: var(--main-color-blue);
   border-radius: 2rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .header .header__info .header__btn a {
@@ -216,6 +218,17 @@ li {
   font-weight: 700;
   min-width: 13rem;
   min-height: 4rem;
+}
+
+.header .header__info .header__btn:hover {
+  outline: 0.3rem solid var(--main-color-blue);
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header .header__info .header__btn:hover a {
+  color: var(--main-color-blue);
 }
 
 /* Слайд со сферой */
@@ -1022,6 +1035,8 @@ li {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 10rem;
+  position: relative;
+  padding-bottom: 5rem;
 }
 
 .reviews__wrapper {
@@ -1029,12 +1044,28 @@ li {
 }
 
 .reviews__text {
-  background: #dceaf2;
-  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #e8f7ffad;
+  padding: 3rem 5rem;
 }
 
 .reviews__text p {
   font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  line-height: 2;
 }
 
 .reviews__greeting {
@@ -1044,7 +1075,63 @@ li {
 .reviews__title {
   color: #008cff;
   font-family: 'Open Sans', sans-serif;
-  font-size: 9rem;
+  font-size: 7rem;
   font-weight: bold;
+  margin-bottom: 5rem;
+}
+
+.reviews__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0.4rem solid #008cff;
+  border-radius: 3rem;
+  color: #008cff;
+  font-weight: 700;
+  padding: 0 4rem;
+  min-height: 6rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.reviews__btn:hover {
+  background-color: #008cff;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.reviews__absract-gif-1 {
+  top: -40rem;
+  left: -64rem;
+}
+
+.reviews__absract-gif-2 {
+  top: -55rem;
+  left: 90rem;
+}
+
+.reviews__absract-gif-3 {
+  top: 0rem;
+  left: 125rem;
+}
+
+@media (min-width: 320px) and (max-width: 960px) {
+  .reviews__absract-gif-1 {
+    display: none;
+  }
+  .reviews__absract-gif-2 {
+    display: none;
+  }
+  .reviews__absract-gif-3 {
+    display: none;
+  }
 }
 /*# sourceMappingURL=reviews.css.map */

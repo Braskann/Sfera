@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сфера НГК</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- фавикон -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- подключение шрифта -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Open+Sans:wght@300;500&display=swap"
+        rel="stylesheet">
+    <!-- font awersome -->
+    <script src="https://kit.fontawesome.com/2f83676f02.js" crossorigin="anonymous"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/eLearning.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header flex-center" id='burger'>
+            <div class="header__mobile">
+                <div class="header__burger" @click="openBurger()">
+                    <span class="header__line"></span>
+                    <span class="header__line"></span>
+                    <span class="header__line"></span>
+                </div>
+            </div>
+            <div class="header__nav flex-center">
+                <div class="header__menu">
+                    <!-- <embed src="img/abstract-shape.gif" type=""> -->
+                    <ul class="header__items flex-center">
+                        <li class="header__li"><a href="index.html" >О нас</a></li>
+                        <li class="header__li"><a href="#">Услуги</a></li>
+                        <li class="header__li"><a href="#">Календарь мероприятий</a></li>
+                        <li class="header__li"><a href="eLearning.html" class="item-menu-active">Дистанционная работа</a></li>
+                        <li class="header__li"><a href="reviews.html" >Отзывы</a></li>
+                    </ul>
+                </div>
+                <div class="header__info">
+                    <ul class="header__items flex-center">
+                        <li class="header__li"><a href="tel:+79991362114">Телефон: +7 999 136 2114</a></li>
+                        <li class="header__li"><a href="https://vk.com/centrngk"><img class="header__icon" src="img/vk-brands.svg" alt=""></a>
+                        </li>
+                        <li class="header__li header__btn flex-center"><a class="flex-center" href="#">Записаться</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <section class="lesson-tabs" id="eLearning">
+            <div class="lesson-tabs__menu flex-center">
+                <ul class="flex-center" @click="openLesson($event)">
+                    <li class="lesson-tabs-active" id="lesson-1">Интерактивный урок по литературе на тему "Обломов"</li>
+                    <li id="lesson-2">Интерактивный урок по литературе на тему "Гроза"</li>
+                    <li id="lesson-3">День народного единства</li>
+                    <li id="lesson-4">Интерактивный урок по физической культуре на тему "Лыжная подготовка"</li>
+                </ul>
+            </div>
+
+            <div class="lesson-tabs__1 lesson-tabs__tab" v-if="lessonVisible == 'lesson-1'">
+                <img class="absract-gif lesson-tabs__absract-gif" src="img/abstract-shape.gif" alt="">
+                <div class="flex-center">
+                    <div class="lesson-tabs__text flex-center">
+                        <h1 class="lesson-tabs__title">СФЕРА</h1>
+                        <p class="lesson-tabs__subtitle">мультимедийный парк профориентации</p>
+                    </div>
+                    <div>
+                        <img class="lesson-tabs__logo" src="img/main-logo.svg" alt="">
+                    </div>
+                </div>
+                <div class="lesson-tabs__tab-titles">
+                    <h1 class="lesson-tabs__tab-title">виртуальный урок</h1>
+                    <h1 class="lesson-tabs__tab-subtitle">на тему романа Ивана Гончарова "Обломов"</h1>
+                </div>
+                <a href="#" class="lesson-tabs__btn">Начать!</a>
+                <img src="img/go.gif" alt="">
+            </div>
+
+            <div class="lesson-tabs__2 lesson-tabs__tab" v-if="lessonVisible == 'lesson-2'">
+                <img class="absract-gif lesson-tabs__absract-gif" src="img/abstract-shape.gif" alt="">
+                <div class="flex-center">
+                    <div class="lesson-tabs__text flex-center">
+                        <h1 class="lesson-tabs__title">СФЕРА</h1>
+                        <p class="lesson-tabs__subtitle">мультимедийный парк профориентации</p>
+                    </div>
+                    <div>
+                        <img class="lesson-tabs__logo" src="img/main-logo.svg" alt="">
+                    </div>
+                </div>
+                <div class="lesson-tabs__tab-titles">
+                    <h1 class="lesson-tabs__tab-title">виртуальный урок</h1>
+                    <h1 class="lesson-tabs__tab-subtitle">на тему Пьеса А. Н. Островского "Гроза"</h1>
+                </div>
+                <a href="#" class="lesson-tabs__btn">Начать!</a>
+                <img src="img/go.gif" alt="">
+            </div>
+
+            <div class="lesson-tabs__3 lesson-tabs__tab" v-if="lessonVisible == 'lesson-3'">
+                <img class="absract-gif lesson-tabs__absract-gif" src="img/abstract-shape.gif" alt="">
+                <div class="flex-center">
+                    <div class="lesson-tabs__text flex-center">
+                        <h1 class="lesson-tabs__title">СФЕРА</h1>
+                        <p class="lesson-tabs__subtitle">мультимедийный парк профориентации</p>
+                    </div>
+                    <div>
+                        <img class="lesson-tabs__logo" src="img/main-logo.svg" alt="">
+                    </div>
+                </div>
+                <div class="lesson-tabs__tab-titles">
+                    <h1 class="lesson-tabs__tab-title">виртуальный урок</h1>
+                    <h1 class="lesson-tabs__tab-subtitle">на тему День народного единства</h1>
+                </div>
+                <a href="#" class="lesson-tabs__btn">Начать!</a>
+                <img src="img/go.gif" alt="">
+            </div>
+            
+            <div class="lesson-tabs__4 lesson-tabs__tab" v-if="lessonVisible == 'lesson-4'">
+                <img class="absract-gif lesson-tabs__absract-gif" src="img/abstract-shape.gif" alt="">
+                <div class="flex-center">
+                    <div class="lesson-tabs__text flex-center">
+                        <h1 class="lesson-tabs__title">СФЕРА</h1>
+                        <p class="lesson-tabs__subtitle">мультимедийный парк профориентации</p>
+                    </div>
+                    <div>
+                        <img class="lesson-tabs__logo" src="img/main-logo.svg" alt="">
+                    </div>
+                </div>
+                <div class="lesson-tabs__tab-titles">
+                    <h1 class="lesson-tabs__tab-title">виртуальный урок</h1>
+                    <h1 class="lesson-tabs__tab-subtitle">на тему "Лыжная подготовка"</h1>
+                </div>
+                <a href="#" class="lesson-tabs__btn">Начать!</a>
+                <img src="img/go.gif" alt="">
+            </div>
+        </section>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

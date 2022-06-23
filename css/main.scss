@@ -13,6 +13,8 @@
 
 html {
     font-size: 0.5vw;
+    // overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 body {
@@ -80,7 +82,8 @@ li {
 
 .absract-gif {
     position: absolute;
-    filter: blur(5rem);
+    // filter: blur(5rem);
+    opacity: 0.3;
     width: 130rem;
     height: 130rem;
     z-index: -1;
@@ -218,8 +221,8 @@ li {
     }
     
     .about-us__absract-gif-2 {
-        bottom: -38rem;
-        right: -35rem;
+        bottom: -45rem;
+        right: -38rem;
         width: 150rem;
         height: 150rem;
     }
@@ -498,7 +501,7 @@ li {
         z-index: 1;
         top: 34rem;
         left: -33rem;
-        filter: blur(7rem);
+        filter: blur(1rem);
         width: 100rem;
         height: 100rem;
     }
@@ -604,8 +607,6 @@ li {
     }
 
     .absract-gif {
-        position: absolute;
-        filter: blur(5rem);
         width: 50rem;
         height: 50rem;
         z-index: -1;

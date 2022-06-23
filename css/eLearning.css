@@ -1029,26 +1029,78 @@ li {
   }
 }
 
-.reviews {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 10rem;
+.lesson-tabs-active {
+  color: black;
   position: relative;
-  padding-bottom: 5rem;
 }
 
-.reviews__wrapper {
-  width: 70%;
+.lesson-tabs-active:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.3rem;
+  bottom: -0.2rem;
+  left: 0;
+  background: black;
 }
 
-.reviews__text {
+.lesson-tabs {
+  margin-top: 20rem;
+  padding-bottom: 2rem;
+}
+
+.lesson-tabs__menu {
+  font-size: 1.6rem;
+  padding: 0 30rem;
+  font-weight: 700;
+  color: #5f5f5f;
+  margin-bottom: 15rem;
+}
+
+.lesson-tabs__menu ul {
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #5f5f5f;
+  position: relative;
+}
+
+.lesson-tabs__menu li {
+  text-align: center;
+  max-width: 25rem;
+  cursor: pointer;
+  min-height: 10rem;
+}
+
+.lesson-tabs__logo {
+  width: 7rem;
+  opacity: .45;
+}
+
+.lesson-tabs__text {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: .45;
+}
+
+.lesson-tabs__text .lesson-tabs__title {
+  font-size: 6rem;
+  color: #370de0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 90%;
+}
+
+.lesson-tabs__text .lesson-tabs__subtitle {
+  color: #1B407C;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.lesson-tabs__tab {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1062,81 +1114,110 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #e8f7ffad;
-  padding: 3rem 5rem;
+  position: relative;
 }
 
-.reviews__text p {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 3rem;
-  line-height: 2;
+.lesson-tabs__absract-gif {
+  left: 100rem;
+  top: -37rem;
+  opacity: .2;
 }
 
-.reviews__greeting {
-  font-weight: bold;
+.lesson-tabs__tab-titles {
+  margin-bottom: 10rem;
+  margin-top: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.reviews__title {
-  color: #008cff;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 7rem;
-  font-weight: bold;
-  margin-bottom: 5rem;
+.lesson-tabs__tab-title {
+  font-size: 8rem;
+  text-transform: uppercase;
+  color: #2c46db;
+  margin-bottom: 10rem;
 }
 
-.reviews__btn {
+.lesson-tabs__tab-subtitle {
+  font-weight: 400;
+  font-size: 6.5rem;
+  opacity: .45;
+}
+
+.lesson-tabs__btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.5rem;
+  background-color: #2c46db;
+  font-size: 4.5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 0.4rem solid #008cff;
-  border-radius: 3rem;
-  color: #008cff;
-  font-weight: 700;
-  padding: 0 4rem;
-  min-height: 6rem;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.reviews__btn:hover {
-  background-color: #008cff;
+  border-radius: 5rem;
   color: white;
+  font-weight: 300;
+  padding: 0 4rem;
+  min-height: 8rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  width: 15%;
 }
 
-.reviews__absract-gif-1 {
-  top: -40rem;
-  left: -64rem;
-}
-
-.reviews__absract-gif-2 {
-  top: -55rem;
-  left: 90rem;
-}
-
-.reviews__absract-gif-3 {
-  top: 0rem;
-  left: 125rem;
+.lesson-tabs__btn:hover {
+  background-color: rgba(255, 255, 255, 0);
+  border: 0.2rem solid #2c46db;
+  color: #2c46db;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media (min-width: 320px) and (max-width: 960px) {
-  .reviews__absract-gif-1 {
-    display: none;
+  .lesson-tabs-active:before {
+    bottom: -1.2rem;
   }
-  .reviews__absract-gif-2 {
-    display: none;
+  .lesson-tabs {
+    margin-top: 10rem;
   }
-  .reviews__absract-gif-3 {
-    display: none;
+  .lesson-tabs__menu {
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 10rem;
+  }
+  .lesson-tabs__menu ul {
+    padding-bottom: 1rem;
+  }
+  .lesson-tabs__menu li {
+    padding: 1rem;
+  }
+  .lesson-tabs__tab-titles {
+    margin: 10rem 0;
+  }
+  .lesson-tabs__tab-title {
+    font-size: 4rem;
+    margin-bottom: 5rem;
+  }
+  .lesson-tabs__tab-subtitle {
+    font-size: 4rem;
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .lesson-tabs__btn {
+    font-size: 2.5rem;
+    min-height: 6.5rem;
+    width: 35%;
   }
 }
-/*# sourceMappingURL=reviews.css.map */
+/*# sourceMappingURL=eLearning.css.map */

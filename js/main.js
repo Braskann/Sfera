@@ -1,4 +1,6 @@
-const App = {
+// const App = 
+
+const app = Vue.createApp({
     data() {
         return {
             headerCompu: false,
@@ -18,7 +20,42 @@ const App = {
             }
         }
     }
-}
-
-const app = Vue.createApp(App);
+});
 app.mount('#burger');
+
+
+
+const eLearning = Vue.createApp({
+    data() {
+        return {
+            lessonVisible: 'lesson-1',
+        }
+    },
+    methods: {
+        openLesson(e) {
+            const items = document.querySelectorAll('.lesson-tabs__menu ul li')
+            for (item of items) {
+                item.classList.remove('lesson-tabs-active')
+            }
+            const listItem = e.target
+            listItem.classList.add('lesson-tabs-active')
+            switch(listItem.getAttribute('id')) {
+                case 'lesson-1':
+                    this.lessonVisible = 'lesson-1'
+                    break;
+                case 'lesson-2':
+                    this.lessonVisible = 'lesson-2'
+                    break;
+                case 'lesson-3':
+                    this.lessonVisible = 'lesson-3'
+                    break;
+                case 'lesson-4':
+                    this.lessonVisible = 'lesson-4'
+                    break;
+                        
+            }
+        }
+    }
+
+});
+eLearning.mount('#eLearning');

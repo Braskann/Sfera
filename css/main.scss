@@ -249,8 +249,11 @@ li {
         }
         
         .about-us__btn {
-            text-align: center;
-            padding-top: 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // width: 25%;
+            // padding-top: 0.5rem;
             font-family: 'Open Sans', sans-serif;
             color: white;
             min-width: 35rem;

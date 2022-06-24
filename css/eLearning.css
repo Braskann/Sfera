@@ -289,8 +289,15 @@ li {
 }
 
 .about-us .about-us__text .about-us__btn {
-  text-align: center;
-  padding-top: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: 'Open Sans', sans-serif;
   color: white;
   min-width: 35rem;
@@ -1201,6 +1208,7 @@ li {
   }
   .lesson-tabs__menu li {
     padding: 1rem;
+    min-height: 12rem;
   }
   .lesson-tabs__tab-titles {
     margin: 10rem 0;

@@ -1,0 +1,310 @@
+@import 'main.scss';
+
+@keyframes move {
+    from {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(3rem);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-105rem); }
+  }
+
+  .marquee-container {
+    background-color: #6c3ee0;
+    width: 100%;
+    display: flex;
+    color: white;
+    font-size: 2rem;
+    padding: 2rem 0;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 10rem;
+
+
+    .marquee-subcontainer {
+        display: flex;
+        width: 200%;
+        animation: marquee 7s infinite linear;
+
+    }
+    
+    .marquee-text {
+    //    margin-right: 5rem;
+       white-space: nowrap;
+       position: relative;
+       min-width: 105rem;
+    //    padding-right: 21rem;
+    }
+
+
+    .marquee-text::after {
+        content: '';
+        position: absolute;
+        right: 1rem;
+        top: 1.5rem;
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 100%;
+        display: block;
+        background-color: #fff;
+    }
+  }
+
+.oblomov-info {
+    position: relative;
+    margin-top: 15rem;
+    height: auto;
+    flex-direction: column;
+
+    &__absract-gif-1 {
+        bottom: -34rem;
+        left: -44rem;
+        opacity: 0.1;
+    }
+
+    &__absract-gif-2 {
+        bottom: -25rem;
+        left: 95rem;
+        opacity: 0.1;
+    }
+
+    &__wrapper {
+        width: 60%;
+        height: 100%;
+    }
+
+    &__img {
+        position: absolute;
+        z-index: -1;
+        transform: translateX(2rem) translateY(-2rem);
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #c9c9bd;
+    }
+
+    &__img-wrapper {
+        position: relative;
+        width: 45%;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__info-wrapper {
+        width: 50%;
+        padding-left: 7rem;
+        height: 100%;
+    }
+
+    &__arrow {
+        width: 4rem;
+        animation: move 2s infinite ease;
+    }
+
+    &__arrow-wrapper {
+        padding-bottom: 3rem;
+        margin: 5rem 0;
+    }
+
+    &__title-wrapper {
+        margin-bottom: 15rem;
+        .oblomov-info__title {
+            font-size: 10rem;
+            color: #6c3ee0;
+            font-weight: 700;
+            text-align: right;
+            line-height: 1;
+        }
+
+        .oblomov-info__subtitle {
+            font-size: 2rem;
+            width: 100%;
+            text-align: right;
+            color: #bcacf4;
+            // opacity: 0.5;
+            font-weight: 300;
+        }
+    }
+
+    &__text {
+        font-size: 2rem;
+        width: 100%;
+        color: #a485ec;
+        font-weight: 300;
+        margin-bottom: 15rem;
+
+        span {
+            font-weight: 700;
+            color: #6c3ee0;
+        }
+
+        .oblomov-info__author {
+            color: #fc8a6a;
+        }
+    }
+    &__btns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Open Sans', sans-serif;
+        color: #6c3ee0;
+        min-width: 13rem;
+        min-height: 5rem;
+        font-weight: 300;
+        font-size: 2rem;
+        border-radius: 4rem;
+        background-color: #e9f5f0;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        transition: 0.5s;
+        // margin-right: 4rem;
+    }
+
+    &__btn:hover {
+        color: white;
+        background-color: #6c3ee0;
+        transition: 0.5s;
+    }
+}
+
+.plot {
+    width: 50%;
+    &__title {
+        font-size: 7rem;
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    &__subtitle {
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 5rem;
+        margin-top: 7rem;
+    }
+
+    &__text {
+        p {
+            font-size: 2rem;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        .plot__description {
+            font-size: 2.5rem;
+            text-align: right;
+            position: relative;
+            padding-top: 2rem;
+        }
+
+        .plot__description::before {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            left: 0;
+            height: 0.15rem;
+            width: 30rem;
+            display: block;
+            background-color: black;
+        }
+    }
+
+    &__description-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 960px){
+
+    .oblomov-info {
+        margin-top: 10rem;
+
+        &__wrapper {
+            width: 100%;
+            flex-direction: column-reverse;
+            position: relative;
+        }
+
+        &__info-wrapper {
+            width: 100%;
+            padding: 0 6rem;
+        }
+
+        &__title-wrapper {
+            margin-bottom: 7rem;
+
+            .oblomov-info__title {
+                font-size: 8rem;
+            }
+        }
+
+        &__img-wrapper {
+            width: 70%;
+            position: absolute;
+            bottom: 10rem;
+        }
+
+        &__text {
+            margin-bottom: 60rem;
+        }
+
+        &__btn {
+            min-width: 12rem;
+            font-size: 1.7rem;
+        }
+
+        &__arrow {
+            margin: 0;
+        } 
+    }
+
+    .plot {
+        width: 80%;
+
+        &__text {
+    
+            .plot__description {
+                padding-bottom: 2rem;
+                margin-bottom: 2rem;
+                text-align: left;
+            }
+    
+            .plot__description::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 0.15rem;
+                width: 30rem;
+                display: block;
+                background-color: black;
+            }
+            .plot__description::before {
+                display: none;
+            }
+        }
+    
+        &__description-wrapper {
+            flex-direction: column-reverse;
+        }
+    }
+}

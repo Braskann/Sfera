@@ -33,12 +33,14 @@ const eLearning = Vue.createApp({
     },
     methods: {
         openLesson(e) {
-            const items = document.querySelectorAll('.lesson-tabs__menu ul li')
-            for (item of items) {
-                item.classList.remove('lesson-tabs-active')
-            }
             const listItem = e.target
-            listItem.classList.add('lesson-tabs-active')
+            if (listItem.tagName == 'LI') {
+                const items = document.querySelectorAll('.lesson-tabs__menu ul li')
+                for (item of items) {
+                    item.classList.remove('lesson-tabs-active')
+                }
+                listItem.classList.add('lesson-tabs-active')
+            }
             switch(listItem.getAttribute('id')) {
                 case 'lesson-1':
                     this.lessonVisible = 'lesson-1'

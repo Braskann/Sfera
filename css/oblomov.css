@@ -26,7 +26,6 @@ body {
 
 .container {
   max-width: 100%;
-  min-height: 100vh;
   overflow-x: hidden;
   overflow-y: hidden;
   margin: 0 auto;
@@ -1036,200 +1035,365 @@ li {
   }
 }
 
-.lesson-tabs-active {
-  color: black;
-  position: relative;
+@-webkit-keyframes move {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
-.lesson-tabs-active:before {
+@keyframes move {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-105rem);
+            transform: translateX(-105rem);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-105rem);
+            transform: translateX(-105rem);
+  }
+}
+
+.marquee-container {
+  background-color: #6c3ee0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  font-size: 2rem;
+  padding: 2rem 0;
+  font-weight: 300;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  margin-bottom: 10rem;
+}
+
+.marquee-container .marquee-subcontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200%;
+  -webkit-animation: marquee 7s infinite linear;
+          animation: marquee 7s infinite linear;
+}
+
+.marquee-container .marquee-text {
+  white-space: nowrap;
+  position: relative;
+  min-width: 105rem;
+}
+
+.marquee-container .marquee-text::after {
   content: '';
   position: absolute;
-  width: 100%;
-  height: 0.3rem;
-  bottom: -0.2rem;
+  right: 1rem;
+  top: 1.5rem;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 100%;
+  display: block;
+  background-color: #fff;
+}
+
+.oblomov-info {
+  position: relative;
+  margin-top: 15rem;
+  height: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.oblomov-info__absract-gif-1 {
+  bottom: -34rem;
+  left: -44rem;
+  opacity: 0.1;
+}
+
+.oblomov-info__absract-gif-2 {
+  bottom: -25rem;
+  left: 95rem;
+  opacity: 0.1;
+}
+
+.oblomov-info__wrapper {
+  width: 60%;
+  height: 100%;
+}
+
+.oblomov-info__img {
+  position: absolute;
+  z-index: -1;
+  -webkit-transform: translateX(2rem) translateY(-2rem);
+          transform: translateX(2rem) translateY(-2rem);
   left: 0;
-  background: black;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #c9c9bd;
 }
 
-.lesson-tabs {
-  margin-top: 20rem;
-  padding-bottom: 2rem;
+.oblomov-info__img-wrapper {
+  position: relative;
+  width: 45%;
 }
 
-.lesson-tabs__menu {
-  font-size: 1.6rem;
-  padding: 0 30rem;
-  font-weight: 700;
-  color: #5f5f5f;
+.oblomov-info__img-wrapper img {
+  width: 100%;
+}
+
+.oblomov-info__info-wrapper {
+  width: 50%;
+  padding-left: 7rem;
+  height: 100%;
+}
+
+.oblomov-info__arrow {
+  width: 4rem;
+  -webkit-animation: move 2s infinite ease;
+          animation: move 2s infinite ease;
+}
+
+.oblomov-info__arrow-wrapper {
+  padding-bottom: 3rem;
+  margin: 5rem 0;
+}
+
+.oblomov-info__title-wrapper {
   margin-bottom: 15rem;
 }
 
-.lesson-tabs__menu ul {
+.oblomov-info__title-wrapper .oblomov-info__title {
+  font-size: 10rem;
+  color: #6c3ee0;
+  font-weight: 700;
+  text-align: right;
+  line-height: 1;
+}
+
+.oblomov-info__title-wrapper .oblomov-info__subtitle {
+  font-size: 2rem;
   width: 100%;
+  text-align: right;
+  color: #bcacf4;
+  font-weight: 300;
+}
+
+.oblomov-info__text {
+  font-size: 2rem;
+  width: 100%;
+  color: #a485ec;
+  font-weight: 300;
+  margin-bottom: 15rem;
+}
+
+.oblomov-info__text span {
+  font-weight: 700;
+  color: #6c3ee0;
+}
+
+.oblomov-info__text .oblomov-info__author {
+  color: #fc8a6a;
+}
+
+.oblomov-info__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 1px solid #5f5f5f;
-  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.lesson-tabs__menu li {
-  text-align: center;
-  max-width: 25rem;
-  cursor: pointer;
-  min-height: 10rem;
-}
-
-.lesson-tabs__logo {
-  width: 7rem;
-  opacity: .45;
-}
-
-.lesson-tabs__text {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  opacity: .45;
-}
-
-.lesson-tabs__text .lesson-tabs__title {
-  font-size: 6rem;
-  color: #370de0;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  line-height: 90%;
-}
-
-.lesson-tabs__text .lesson-tabs__subtitle {
-  color: #1B407C;
+.oblomov-info__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
-  text-transform: uppercase;
-}
-
-.lesson-tabs__tab {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-}
-
-.lesson-tabs__absract-gif {
-  left: 100rem;
-  top: -37rem;
-  opacity: .2;
-}
-
-.lesson-tabs__tab-titles {
-  margin-bottom: 10rem;
-  margin-top: 15rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.lesson-tabs__tab-title {
-  font-size: 8rem;
-  text-transform: uppercase;
-  color: #2c46db;
-  margin-bottom: 10rem;
-}
-
-.lesson-tabs__tab-subtitle {
-  font-weight: 400;
-  font-size: 6.5rem;
-  opacity: .45;
-}
-
-.lesson-tabs__btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #2c46db;
-  font-size: 4.5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 5rem;
-  color: white;
+  color: #6c3ee0;
+  min-width: 13rem;
+  min-height: 5rem;
   font-weight: 300;
-  padding: 0 4rem;
-  min-height: 8rem;
+  font-size: 2rem;
+  border-radius: 4rem;
+  background-color: #e9f5f0;
+  outline: none;
+  cursor: pointer;
+  border: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  width: 15%;
 }
 
-.lesson-tabs__btn:hover {
-  background-color: rgba(255, 255, 255, 0);
-  border: 0.2rem solid #2c46db;
-  color: #2c46db;
+.oblomov-info__btn:hover {
+  color: white;
+  background-color: #6c3ee0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+.plot {
+  width: 50%;
+}
+
+.plot__title {
+  font-size: 7rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.plot__subtitle {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 5rem;
+  margin-top: 7rem;
+}
+
+.plot__text p {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.plot__text .plot__description {
+  font-size: 2.5rem;
+  text-align: right;
+  position: relative;
+  padding-top: 2rem;
+}
+
+.plot__text .plot__description::before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  height: 0.15rem;
+  width: 30rem;
+  display: block;
+  background-color: black;
+}
+
+.plot__description-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 @media (min-width: 320px) and (max-width: 960px) {
-  .lesson-tabs-active:before {
-    bottom: -1.2rem;
-  }
-  .lesson-tabs {
+  .oblomov-info {
     margin-top: 10rem;
   }
-  .lesson-tabs__menu {
-    padding: 0 2rem;
-    font-size: 1.2rem;
-    margin-bottom: 10rem;
+  .oblomov-info__wrapper {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    position: relative;
   }
-  .lesson-tabs__menu ul {
-    padding-bottom: 1rem;
+  .oblomov-info__info-wrapper {
+    width: 100%;
+    padding: 0 6rem;
   }
-  .lesson-tabs__menu li {
-    padding: 1rem;
-    min-height: 12rem;
+  .oblomov-info__title-wrapper {
+    margin-bottom: 7rem;
   }
-  .lesson-tabs__tab-titles {
-    margin: 10rem 0;
+  .oblomov-info__title-wrapper .oblomov-info__title {
+    font-size: 8rem;
   }
-  .lesson-tabs__tab-title {
-    font-size: 4rem;
-    margin-bottom: 5rem;
+  .oblomov-info__img-wrapper {
+    width: 70%;
+    position: absolute;
+    bottom: 10rem;
   }
-  .lesson-tabs__tab-subtitle {
-    font-size: 4rem;
-    font-size: 3.5rem;
-    text-align: center;
+  .oblomov-info__text {
+    margin-bottom: 60rem;
   }
-  .lesson-tabs__btn {
-    font-size: 2.5rem;
-    min-height: 6.5rem;
-    width: 35%;
+  .oblomov-info__btn {
+    min-width: 12rem;
+    font-size: 1.7rem;
   }
-  .lesson-tabs__go-img {
-    margin-top: 3rem;
-    width: 20rem;
+  .oblomov-info__arrow {
+    margin: 0;
+  }
+  .plot {
+    width: 80%;
+  }
+  .plot__text .plot__description {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  .plot__text .plot__description::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.15rem;
+    width: 30rem;
+    display: block;
+    background-color: black;
+  }
+  .plot__text .plot__description::before {
+    display: none;
+  }
+  .plot__description-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
-/*# sourceMappingURL=eLearning.css.map */
+/*# sourceMappingURL=oblomov.css.map */

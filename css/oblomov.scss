@@ -17,6 +17,16 @@
     100% { transform: translateX(-105rem); }
   }
 
+  @keyframes marquee-2 {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-231rem); }
+  }
+
+  @keyframes marquee-3 {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-248rem); }
+  }
+
   .marquee-container {
     background-color: #6c3ee0;
     width: 100%;
@@ -37,17 +47,41 @@
         animation: marquee 7s infinite linear;
 
     }
+
+    .marquee-subcontainer-2 {
+        display: flex;
+        width: 200%;
+        animation: marquee-2 15s infinite linear;
+
+    }
+
+    .marquee-subcontainer-3 {
+        display: flex;
+        width: 200%;
+        animation: marquee-3 15s infinite linear;
+
+    }
     
     .marquee-text {
-    //    margin-right: 5rem;
        white-space: nowrap;
        position: relative;
        min-width: 105rem;
-    //    padding-right: 21rem;
     }
 
+    .marquee-text-2 {
+        white-space: nowrap;
+        position: relative;
+        min-width: 231rem;
+     }
 
-    .marquee-text::after {
+     .marquee-text-3 {
+        white-space: nowrap;
+        position: relative;
+        min-width: 248rem;
+     }
+
+
+    .marquee-text::after, .marquee-text-2::after, .marquee-text-3::after {
         content: '';
         position: absolute;
         right: 1rem;
@@ -187,6 +221,7 @@
 
 .plot {
     width: 50%;
+    margin-bottom: 10rem;
     &__title {
         font-size: 7rem;
         text-align: center;
@@ -196,8 +231,8 @@
     &__subtitle {
         font-size: 4rem;
         text-align: center;
-        margin-bottom: 5rem;
-        margin-top: 7rem;
+        margin-bottom: 10rem;
+        margin-top: 10rem;
     }
 
     &__text {
@@ -230,6 +265,166 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+    }
+
+    &__dream {
+        position: relative;
+    }
+
+    &__dream-subtitle {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    &__dream-card {
+
+        p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1.5;    
+        }
+    }
+
+    &__dream-card.left {
+        p, h3 {
+            text-align: right;  
+        }
+    }
+
+    &__dream-card.left.two {
+        margin-top: 27rem;
+    }
+
+    &__dream-card.right {
+        margin-top: 26rem;
+        h3 {
+            text-align: left;
+        }
+    }
+
+    &__dream-cards {
+        align-items: flex-start;
+    }
+
+    &__progression {
+        padding: 0 5rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 10%;
+        align-items: center;
+    }
+
+    &__dot {
+        height: 2rem;
+        width: 2rem;
+        background-color: black;
+        border-radius: 50%;
+    }
+
+    &__line {
+        height: 25rem;
+        width: 0.2rem;
+        background-color: #e0e0e0;
+        margin: 0.3rem 0;
+    }
+}
+
+.characters {
+    width: 50%;
+    margin-bottom: 10rem;
+    margin-top: 10rem;
+
+    &__title {
+        font-size: 7rem;
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    &__subtitle {
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 10rem;
+        margin-top: 10rem;
+    }
+
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+
+    &__card-img {
+        width: 40%;
+        height: 40rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__card-img-1 {
+        background-image: url(../img/character-1.png);
+    }
+
+    &__card-img-2 {
+        background-image: url(../img/character-2.jpg);
+    }
+
+    &__card-img-3 {
+        background-image: url(../img/character-3.png);
+    }
+
+    &__text {
+        width: 57%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__card-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    &__card-subtitle {
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #7a7a7a;
+        text-align: center;
+        margin-bottom: 3rem;
+        margin-top: 1rem;
+    }
+
+    &__card-text {
+        font-size: 1.7rem;
+        text-align: center;
+        font-weight: 300;
+    }
+}
+
+.tasks {
+    width: 80%;
+    margin-bottom: 10rem;
+
+    &__title {
+        font-size: 7rem;
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    &__subtitle {
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        margin-top: 7rem;
+    }
+
+    &__description {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 3rem;
     }
 }
 
@@ -306,5 +501,59 @@
         &__description-wrapper {
             flex-direction: column-reverse;
         }
+
+        &__dream-subtitle {
+            font-size: 1.5rem;
+        }
+
+        &__dream-card {
+            p {
+                font-size: 1.2rem;
+            }
+        }
+
+        &__dream-card.left.two {
+            margin-top: 14rem;
+        }
+
+        .plot__dream-subtitle {
+            margin-bottom: 2rem;
+        }
     }
+
+    .characters {
+        width: 80%;
+        margin-top: 0rem;
+
+        &__subtitle {
+            margin-bottom: 5rem;
+            margin-top: 5rem;
+        }
+    
+        &__card {
+            flex-direction: column-reverse;
+        }
+    
+        &__card-img {
+            width: 90%;
+            height: 35rem;
+            overflow: hidden;
+            margin-top: 3rem;
+        }
+    
+    
+        &__text {
+            width: 90%;
+        }
+    
+        &__card-title {
+            text-align: center;
+        }
+    
+    
+        &__card-text {
+            text-align: left;
+        }
+    }
+
 }

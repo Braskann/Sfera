@@ -1087,6 +1087,50 @@ li {
   }
 }
 
+@-webkit-keyframes marquee-2 {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-231rem);
+            transform: translateX(-231rem);
+  }
+}
+
+@keyframes marquee-2 {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-231rem);
+            transform: translateX(-231rem);
+  }
+}
+
+@-webkit-keyframes marquee-3 {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-248rem);
+            transform: translateX(-248rem);
+  }
+}
+
+@keyframes marquee-3 {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-248rem);
+            transform: translateX(-248rem);
+  }
+}
+
 .marquee-container {
   background-color: #6c3ee0;
   width: 100%;
@@ -1114,13 +1158,43 @@ li {
           animation: marquee 7s infinite linear;
 }
 
+.marquee-container .marquee-subcontainer-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200%;
+  -webkit-animation: marquee-2 15s infinite linear;
+          animation: marquee-2 15s infinite linear;
+}
+
+.marquee-container .marquee-subcontainer-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200%;
+  -webkit-animation: marquee-3 15s infinite linear;
+          animation: marquee-3 15s infinite linear;
+}
+
 .marquee-container .marquee-text {
   white-space: nowrap;
   position: relative;
   min-width: 105rem;
 }
 
-.marquee-container .marquee-text::after {
+.marquee-container .marquee-text-2 {
+  white-space: nowrap;
+  position: relative;
+  min-width: 231rem;
+}
+
+.marquee-container .marquee-text-3 {
+  white-space: nowrap;
+  position: relative;
+  min-width: 248rem;
+}
+
+.marquee-container .marquee-text::after, .marquee-container .marquee-text-2::after, .marquee-container .marquee-text-3::after {
   content: '';
   position: absolute;
   right: 1rem;
@@ -1280,6 +1354,7 @@ li {
 
 .plot {
   width: 50%;
+  margin-bottom: 10rem;
 }
 
 .plot__title {
@@ -1291,8 +1366,8 @@ li {
 .plot__subtitle {
   font-size: 4rem;
   text-align: center;
-  margin-bottom: 5rem;
-  margin-top: 7rem;
+  margin-bottom: 10rem;
+  margin-top: 10rem;
 }
 
 .plot__text p {
@@ -1329,6 +1404,186 @@ li {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.plot__dream {
+  position: relative;
+}
+
+.plot__dream-subtitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.plot__dream-card p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.plot__dream-card.left p, .plot__dream-card.left h3 {
+  text-align: right;
+}
+
+.plot__dream-card.left.two {
+  margin-top: 27rem;
+}
+
+.plot__dream-card.right {
+  margin-top: 26rem;
+}
+
+.plot__dream-card.right h3 {
+  text-align: left;
+}
+
+.plot__dream-cards {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.plot__progression {
+  padding: 0 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.plot__dot {
+  height: 2rem;
+  width: 2rem;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.plot__line {
+  height: 25rem;
+  width: 0.2rem;
+  background-color: #e0e0e0;
+  margin: 0.3rem 0;
+}
+
+.characters {
+  width: 50%;
+  margin-bottom: 10rem;
+  margin-top: 10rem;
+}
+
+.characters__title {
+  font-size: 7rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.characters__subtitle {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 10rem;
+  margin-top: 10rem;
+}
+
+.characters__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5rem;
+}
+
+.characters__card-img {
+  width: 40%;
+  height: 40rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.characters__card-img-1 {
+  background-image: url(../img/character-1.png);
+}
+
+.characters__card-img-2 {
+  background-image: url(../img/character-2.jpg);
+}
+
+.characters__card-img-3 {
+  background-image: url(../img/character-3.png);
+}
+
+.characters__text {
+  width: 57%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.characters__card-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.characters__card-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #7a7a7a;
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+.characters__card-text {
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+.tasks {
+  width: 80%;
+  margin-bottom: 10rem;
+}
+
+.tasks__title {
+  font-size: 7rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.tasks__subtitle {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 7rem;
+}
+
+.tasks__description {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 @media (min-width: 320px) and (max-width: 960px) {
@@ -1394,6 +1649,47 @@ li {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+  .plot__dream-subtitle {
+    font-size: 1.5rem;
+  }
+  .plot__dream-card p {
+    font-size: 1.2rem;
+  }
+  .plot__dream-card.left.two {
+    margin-top: 14rem;
+  }
+  .plot .plot__dream-subtitle {
+    margin-bottom: 2rem;
+  }
+  .characters {
+    width: 80%;
+    margin-top: 0rem;
+  }
+  .characters__subtitle {
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+  .characters__card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .characters__card-img {
+    width: 90%;
+    height: 35rem;
+    overflow: hidden;
+    margin-top: 3rem;
+  }
+  .characters__text {
+    width: 90%;
+  }
+  .characters__card-title {
+    text-align: center;
+  }
+  .characters__card-text {
+    text-align: left;
   }
 }
 /*# sourceMappingURL=oblomov.css.map */

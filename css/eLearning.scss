@@ -15,17 +15,6 @@
     background: black;
 }
 
-// .v-enter-to, .v-leave  {
-//     opacity: 1;
-//     transition: 0.3s;
-// }
-
-// .v-enter, .v-leave-to{
-//     opacity: 0;
-//     transition: 0.3s;
-// }
-
-
 .lesson-tabs {
     margin-top: 20rem;
     padding-bottom: 2rem;
@@ -44,16 +33,6 @@
             border-bottom: 1px solid rgb(95, 95, 95);
             position: relative;
         }
-
-        // ul::before {
-        //     content: '';
-        //     position: absolute;
-        //     width: 25%;
-        //     height: 0.1rem;
-        //     bottom: 0;
-        //     left: 0;
-        //     background: black;
-        // }
 
         li {
             text-align: center;

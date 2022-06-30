@@ -1,5 +1,3 @@
-// const App = 
-
 const app = Vue.createApp({
     data() {
         return {

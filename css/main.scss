@@ -590,16 +590,35 @@ li {
     }
 }
 
-@media (min-width: 960px) and (max-width: 1200px) {
-    .header {
-        .header__menu {
-            font-size: 2.3rem;
-        }
-        .header__info {
-            font-size: 1.7rem;
-        }
-    } 
+// СТРАНИЦА В РАЗРАБОТКЕ
+
+.plug {
+    display: flex;
+    width: 90vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-size: 20rem;
+    }
+
+    img {
+        right: -10rem;
+    }
 }
+
+
+// @media (min-width: 960px) and (max-width: 1200px) {
+//     .header {
+//         .header__menu {
+//             font-size: 2.3rem;
+//         }
+//         .header__info {
+//             font-size: 1.7rem;
+//         }
+//     } 
+// }
 
 @media (min-width: 320px) and (max-width: 960px) {
     html {
@@ -957,6 +976,23 @@ li {
 
         }
     }
+
+    .plug {
+        display: flex;
+        width: 90vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    
+        h1 {
+            font-size: 8rem;
+        }
+    
+        img {
+            right: -15rem;
+            top: 20rem;
+        }
+    }
 }
 
 @media (min-width: 960px) and (max-width: 1200px) {
@@ -970,6 +1006,3 @@ li {
     }   
 }
 
-// @media (min-width: 320px) and (max-width: 640px) {
-
-// }

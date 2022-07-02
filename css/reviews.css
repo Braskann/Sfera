@@ -790,7 +790,7 @@ li {
     width: 2.8rem;
     position: absolute;
     bottom: -5rem;
-    right: 2rem;
+    right: 5rem;
     -webkit-animation: pulse 3s ease-in-out infinite;
     animation: pulse 3s ease-in-out infinite;
   }

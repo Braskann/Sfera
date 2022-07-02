@@ -682,6 +682,7 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 .plug h1 {
@@ -1055,7 +1056,7 @@ li {
   }
   .plug img {
     right: -15rem;
-    top: 20rem;
+    top: 5rem;
   }
 }
 

@@ -598,6 +598,7 @@ li {
     height: 100vh;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     h1 {
         font-size: 20rem;
@@ -990,7 +991,7 @@ li {
     
         img {
             right: -15rem;
-            top: 20rem;
+            top: 5rem;
         }
     }
 }

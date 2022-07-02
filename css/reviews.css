@@ -532,7 +532,7 @@ li {
 }
 
 .who-we-are__img-4 {
-  z-index: 5;
+  z-index: 1;
   left: -4rem;
   top: -4rem;
 }
@@ -682,7 +682,7 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow-x: hidden;
+  position: relative;
 }
 
 .plug h1 {
@@ -1056,7 +1056,7 @@ li {
   }
   .plug img {
     right: -15rem;
-    top: 20rem;
+    top: 5rem;
   }
 }
 
@@ -1067,6 +1067,10 @@ li {
   .header .header__info {
     font-size: 1.7rem;
   }
+}
+
+.reviews-wrapper {
+  height: 100vh;
 }
 
 .reviews {
